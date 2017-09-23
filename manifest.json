@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Messenger to Markdown",
+  "description": "Convert Messenger chats to markdown",
+  "version": "1.0",
+  "browser_action": {
+    "default_title": "Convert"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab"]
+}
