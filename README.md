@@ -11,7 +11,9 @@ See: https://developer.chrome.com/extensions/getstarted#unpacked
 [0]: https://www.messenger.com
 [1]: http://dayoneapp.com/
 
-# Example Markdown Output
+# Example Conversation
+
+![example conversation](https://i.imgur.com/4d303uf.png)
 
 ```
 > **Jamie Wong** *Sunday 1:02pm*
