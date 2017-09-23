@@ -4,12 +4,14 @@ Use this Chrome extension to convert your currently active conversation on
 [messenger.com][0] to markdown. Useful for pasting conversations elsewhere,
 especially into a journal like [Day One][1]
 
-To install, git clone this repository, then install the extension as an unpacked plugin.
+To install, [download this extension as a zip file][2], then [install it as an unpacked extension][3].
 
-See: https://developer.chrome.com/extensions/getstarted#unpacked
+See https://developer.chrome.com/extensions/getstarted#unpacked for intructions.
 
 [0]: https://www.messenger.com
 [1]: http://dayoneapp.com/
+[2]: https://github.com/jlfwong/messenger-to-markdown/archive/master.zip
+[3]: https://developer.chrome.com/extensions/getstarted#unpacked
 
 # Example Conversation
 
