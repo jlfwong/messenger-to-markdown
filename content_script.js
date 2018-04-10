@@ -27,9 +27,10 @@
 
   var nodes = [].slice.apply(document.querySelectorAll("[aria-label=Messages] [data-hover=tooltip]"))
   var name = document.querySelector("[aria-label=Messages] img[alt]").getAttribute("alt")
+  var me = document.querySelector("h5._ih3.accessible_elem").innerText;
 
   var content = nodes.map(e => ({
-    name: e.getAttribute("data-tooltip-position") === "left" ? name : "Jamie Wong",
+    name: e.getAttribute("data-tooltip-position") === "left" ? name : me,
     time: e.getAttribute("data-tooltip-content"),
     content: e.textContent
   })).filter(v => v.content.length > 0)
