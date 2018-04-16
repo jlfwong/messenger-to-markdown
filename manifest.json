@@ -4,11 +4,13 @@
   "description": "Convert Messenger chats to markdown",
   "version": "1.0",
   "browser_action": {
-    "default_title": "Convert"
+    "default_title": "Messenger to Markdown",
   },
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "permissions": ["activeTab"]
+
+  // clipboardWrite is required by Firefox but not Chrome
+  "permissions": ["activeTab", "clipboardWrite"]
 }
