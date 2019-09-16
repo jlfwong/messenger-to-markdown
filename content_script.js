@@ -34,12 +34,12 @@
   }
 
   var me = document.querySelector("h5._ih3.accessible_elem").innerText;
-  var nodes = [].slice.apply(document.querySelectorAll("[aria-label=Messages] [data-hover=tooltip]"))
-  var content = nodes.map(e => ({
+  var nodes = Array.from(document.querySelectorAll("[aria-label=Messages] [data-hover=tooltip]"))
+  var content = nodes.filter(n => n.textContent.length > 0).map(e => ({
     name: e.getAttribute("data-tooltip-position") === "left" ? name : me,
     time: e.getAttribute("data-tooltip-content"),
-    content: e.textContent
-  })).filter(v => v.content.length > 0)
+    content: e.querySelector("[aria-label]").textContent
+  }))
 
   content = content.reduce((result, msg) => {
     if (result.length === 0 || result[result.length - 1].name !== msg.name) {
