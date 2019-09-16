@@ -25,10 +25,16 @@
     a.dispatchEvent(e);
   };
 
-  var nodes = [].slice.apply(document.querySelectorAll("[aria-label=Messages] [data-hover=tooltip]"))
-  var name = document.querySelector("[aria-label=Messages] img[alt]").getAttribute("alt")
-  var me = document.querySelector("h5._ih3.accessible_elem").innerText;
+  var name = ''
+  for (var img of document.querySelectorAll("[aria-label=Messages] img[alt]")) {
+    const alt = img.getAttribute('alt')
+    if (alt.length > name.length && alt.indexOf('Seen by') === -1) {
+      name = alt
+    }
+  }
 
+  var me = document.querySelector("h5._ih3.accessible_elem").innerText;
+  var nodes = [].slice.apply(document.querySelectorAll("[aria-label=Messages] [data-hover=tooltip]"))
   var content = nodes.map(e => ({
     name: e.getAttribute("data-tooltip-position") === "left" ? name : me,
     time: e.getAttribute("data-tooltip-content"),
