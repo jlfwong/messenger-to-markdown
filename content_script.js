@@ -37,11 +37,11 @@
   var nodes = Array.from(document.querySelectorAll("[aria-label=Messages] [data-hover=tooltip]"))
   var content = nodes.filter(n => n.textContent.length > 0)
     .filter(e => e.getAttribute('data-tooltip-position') != null) // Filter out reactions
-    .filter(e => e.querySelector("div[aria-label]") != null)
+    .filter(e => e.querySelector("div[tabindex]") != null)
     .map(e => ({
       name: e.getAttribute("data-tooltip-position") === "left" ? name : me,
       time: e.getAttribute("data-tooltip-content"),
-      content: e.querySelector("div[aria-label]").textContent
+      content: e.querySelector("div[tabindex]").textContent
     }))
 
   content = content.reduce((result, msg) => {
